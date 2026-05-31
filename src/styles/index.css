@@ -1,0 +1,10 @@
+/* Style entry point. Import order defines the cascade — keep it deliberate:
+   tokens → base utilities → background → component layers → responsive. */
+@import './tokens.css';
+@import './base.css';
+@import './background.css';
+@import './nav.css';
+@import './hero.css';
+@import './sections.css';
+@import './projects.css';
+@import './responsive.css';

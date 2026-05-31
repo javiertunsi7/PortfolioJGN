@@ -1,0 +1,22 @@
+/* Design tokens — single source of truth for color, spacing and type. */
+:root {
+  --bg: #06080b;
+  --bg-2: #080b10;
+  --surface: rgba(255, 255, 255, 0.035);
+  --surface-2: rgba(255, 255, 255, 0.055);
+  --border: rgba(255, 255, 255, 0.09);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --text: #e9eef4;
+  --text-mute: #9aa6b4;
+  --text-dim: #5e6b7a;
+  --accent: #34d399; /* emerald */
+  --accent-2: #818cf8; /* indigo */
+  --accent-ink: #04140d;
+  --glow: 1.19; /* ambient glow intensity (the design's default) */
+  --radius: 22px;
+  --radius-sm: 13px;
+  --maxw: 1180px;
+  --pad-block: 7.5rem;
+  --font: 'Inter', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+}
