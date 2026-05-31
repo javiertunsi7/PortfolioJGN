@@ -150,7 +150,8 @@ body {
     transition: none !important;
   }
   .dot,
-  .ambient span {
+  .ambient span,
+  .nav-mobile {
     animation: none !important;
   }
 }

@@ -8,6 +8,8 @@ export const en = {
     cta: 'Get in touch',
     skip: 'Skip to content',
     langLabel: 'Language',
+    openMenu: 'Open menu',
+    closeMenu: 'Close menu',
   },
   hero: {
     status: 'Available · Immediate start',

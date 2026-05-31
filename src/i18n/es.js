@@ -8,6 +8,8 @@ export const es = {
     cta: 'Contactar',
     skip: 'Saltar al contenido',
     langLabel: 'Idioma',
+    openMenu: 'Abrir menú',
+    closeMenu: 'Cerrar menú',
   },
   hero: {
     status: 'Disponible · Incorporación inmediata',

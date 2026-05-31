@@ -27,6 +27,47 @@
   .nav-links {
     display: none;
   }
+  .nav-burger {
+    display: inline-flex;
+  }
+  .nav-right .btn {
+    display: none; /* the CTA moves into the mobile menu */
+  }
+  .nav-mobile {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px;
+    border-radius: 16px;
+    background: rgba(10, 13, 18, 0.92);
+    border: 1px solid var(--border);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    backdrop-filter: blur(18px) saturate(140%);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+    animation: navMenuIn 0.18s ease;
+  }
+  .nav-mobile a {
+    color: var(--text-mute);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 11px 14px;
+    border-radius: 10px;
+    transition: color 0.2s, background 0.2s;
+  }
+  .nav-mobile a:hover,
+  .nav-mobile a:focus-visible {
+    color: var(--text);
+    background: var(--surface-2);
+  }
+  .nav-mobile .nav-mobile-cta {
+    justify-content: center;
+    margin-top: 6px;
+  }
 }
 
 @media (max-width: 560px) {
