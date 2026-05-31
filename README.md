@@ -31,6 +31,8 @@ npm install      # instala dependencias
 npm run dev      # servidor de desarrollo (http://localhost:5173)
 npm run build    # build de producción en /dist
 npm run preview  # sirve /dist localmente para verificar el build
+npm run test     # ejecuta la batería de tests (Vitest)
+npm run test:coverage  # tests + informe de cobertura
 npm run lint     # análisis estático con ESLint
 npm run format   # formatea el código con Prettier
 ```
@@ -78,6 +80,24 @@ src/
   mapas declarativos: añadir uno nuevo no obliga a tocar la lógica de renderizado.
 - **Inversión de dependencias** — los componentes consumen `useLanguage()` en lugar de
   recibir traducciones por props encadenadas.
+
+---
+
+## 🧪 Testing
+
+Tests del frontend con **Vitest + React Testing Library** (entorno jsdom):
+
+- **52 tests** en 16 ficheros — **100 %** de líneas y funciones (~94 % de ramas).
+- Cubre lógica de i18n (`pick`, paridad de claves ES/EN), hooks (`usePersistentState`,
+  `useReveal`), el contexto de idioma, las primitivas de UI, las secciones y un test de
+  humo de la app (landmarks + cambio de idioma de extremo a extremo).
+- Incluye **regresiones de seguridad**: todo enlace externo debe llevar
+  `rel="noopener noreferrer"` y el teléfono nunca debe renderizarse.
+
+```bash
+npm run test            # ejecuta los tests
+npm run test:coverage   # con informe de cobertura (carpeta /coverage)
+```
 
 ---
 
