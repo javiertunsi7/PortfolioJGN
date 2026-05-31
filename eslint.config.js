@@ -28,6 +28,11 @@ export default [
     },
   },
   {
+    // Config files run in Node, not the browser.
+    files: ['*.config.js'],
+    languageOptions: { globals: globals.node },
+  },
+  {
     // Test files + helpers: allow Vitest globals and relax the fast-refresh rule.
     files: ['**/*.test.{js,jsx}', 'src/test/**/*.{js,jsx}'],
     languageOptions: {

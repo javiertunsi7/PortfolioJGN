@@ -167,6 +167,7 @@ El proyecto es estático: sirve la carpeta `dist/` tras `npm run build`.
 - **Proyectos**: `src/data/projects.js`.
 - **Contacto**: `src/data/contact.js`.
 - **Foto del hero**: reemplaza `public/profile.jpg` por tu retrato (recomendado ~600×630 px, JPG/WebP optimizado).
+- **Imagen al compartir (Open Graph)**: `public/og-image.jpg` (1200×630). Define `VITE_SITE_URL` con tu dominio para que la previsualización al compartir el enlace funcione — ver [`.env.example`](.env.example) (en Vercel/Netlify se autodetecta).
 - **Colores y espaciado**: `src/styles/tokens.css`.
 
 ---
