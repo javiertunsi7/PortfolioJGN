@@ -1,4 +1,5 @@
-import { defineConfig } from 'vite';
+/// <reference types="vitest/config" />
+import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
 
 /**
@@ -52,5 +53,19 @@ export default defineConfig({
     outDir: 'dist',
     // Do not ship source maps publicly: keeps the original source out of prod.
     sourcemap: false,
+  },
+  // Vitest — unit/component tests run in a jsdom DOM with Testing Library.
+  test: {
+    environment: 'jsdom',
+    globals: true,
+    setupFiles: './src/test/setup.js',
+    restoreMocks: true,
+    css: false,
+    coverage: {
+      provider: 'v8',
+      reporter: ['text', 'html'],
+      include: ['src/**/*.{js,jsx}'],
+      exclude: ['src/main.jsx', 'src/test/**', '**/*.test.{js,jsx}'],
+    },
   },
 });
